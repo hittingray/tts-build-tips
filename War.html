@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>War</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>PS Warrior</h1>
+<hr />
+<h2>Builds</h2>
+<p><a href="http://gw2skills.net/editor/?vJAQNAR5enckC9dg1eAefAEliliA7d4mcfuGDgHQAIJI8DeeA-TBSBABUq+DAXEAKOCA4pbwMlg0s/wVK/e4BAQKA9kaB-e" title="General PS Warrior Build">General PS Warrior Build</a></p>
+<p><a href="http://gw2skills.net/editor/?vJAQNAR5enckC9dg1eAefAEliliALJI8DeevD3k7z1YA8ACAA-TRSBABmpEUUVCA4iAQxRA4hHAAe6GoUdnr2fUeQmSMSBE4UL-e" title="Super Optimised PS Warrior Build">Super Optimised PS Warrior Build</a></p>
+<h2>General Tips</h2>
+<ul>
+<li>You have the trait <em>Stick and Move</em> - make sure your endurance isn't always full. Burst skills restore endurance, remember.</li>
+<li><em>Blood Reckoning</em> gives might, adrenaline, and recharges primal burst cool downs. Make sure you are using it when in berserker mode for additional DPS</li>
+<li>Swaping out of Greatsword is a huge DPS loss for the raid, and should only be done in an emergency (E.G. Breaking the sacrifice at Matthius)</li>
+<li>Consider taking 2 greatswords into fights where breaks are low priority (Sabetha). Swapping weapons is a great way to cancel GS 5 and 3</li>
+<li>Try not to use GS 5 unless you are inside the Boss's hitbox.</li>
+<li>The GS Auto Attack has terrible DPS and should be used as little as possible. Ideally, you want to be best friends with the Mesmer and get as much Alacrity as possible as this will put your DPS into insane levels</li>
+</ul>
+<h2>Boss Tips</h2>
+<h3>Vale Guardian</h3>
+<ul>
+<li>Swap out <em>Signet of Fury</em> for <em>Stomp</em> to knock back seekers, and help with break bars. In movement/kiting phase, time your <em>Heabutt</em> carefully so you have it ready for break bars</li>
+<li>Depending on your DPS, you can generally use <em>Headbutt</em> to break VG during the split phase, and have it be ready for the first break in phases 3 and 5</li>
+<li><em>Stomp</em> is far better for seeker control than breaking</li>
+<li>Consider taking <em>Wild Blow</em> over <em>Stomp</em> if the raid's seeker control is good but you are struggling for breaks.</li>
+<li>You make an excellent back-up for the circle group due to GS3 and GS5 giving you excellent mobility. Just remember to turn off Auto-Targeting is GS5ing into a seeker is bad</li>
+</ul>
+<h3>Gorseval the Multifarious</h3>
+<ul>
+<li>Depending on the speed at which Gorseval's break bar is being removed, consider taking <em>Wild Blow</em> instead of <em>Signet of Fury</em> to help with breakbars.</li>
+<li>Time your <em>Headbutt</em> usage so that you have it ready for break bars. Often you will not have enough time to use it at the very start of the fight and for the first break bar, depending on DPS</li>
+<li>It is generally best to open the fight GS 4 &gt; <em>Heatbutt</em> &gt; <em>Beserk</em> &gt; <em>Arc Divider</em> &gt; GS 3 &gt; GS 2. If timed correctly GS 3 should dodge the slam and allow you to get a full hit of GS 2 in before the Rampage</li>
+<li><em>Throw Bolas</em> can be used to assist with holding a spirit. At the start of the spirit phase use <em>Throw Bolas</em> on the 4th spirit and then join the zerg.</li>
+<li>GS4 can be safely used to clear off low health orbs</li>
+<li>Mace/Mace may be better than Mace/Shield in this fight, as during the final phase you can use Mace 5 as a ranged break to avoid damage during the Rampage</li>
+</ul>
+<h3>Sabetha the Saboteur</h3>
+<ul>
+<li>Be careful if you use <em>Rush</em> (Greatsword 5), as Sabetha teleports off the platform. Doing this when she teleports will cause you to run off the platform to your death</li>
+<li>If the zerg is stacking correctly, you can take 2 steps to your left when the Flame Wall starts and use GS2. Even in the final phase it will finish with enough time remaining for you to move away for the last part of the wall</li>
+<li>As breaks are not a high priority in this fight, consider taking <em>Battle Standard</em>. It can save the raid from a wipe and save people from the Flame Wall</li>
+<li>It is generally not a good idea to use GS2 during the final phase of the fight as you will need to stay as mobile as possible</li>
+<li>If you are controlling Timed Bombs (and you probably should be). Use GS3 to quickly get away from the rest of the zerg. You can begin walking back towards the zerg before the Timed Bomb Explodes, and use GS4 and <em>Arc Divider</em> on the way back in, and then GS5 as you are moving back through Sabetha</li>
+<li>Auto Targeting is almost recommend here, as it will save you from accidentally GS5ing off the platform</li>
+</ul>
+<h3>Slothasor</h3>
+<ul>
+<li>Don't try to keep up <em>Stick and Move</em>. Save your dodges in this fight, there are plenty of mechanics that need you to have dodges ready</li>
+<li><em>Shake it off</em> can be used as an extra stun breaker if required</li>
+<li><em>Headbutt</em> is also a stun breaker. Use it if you find yourself being feared into certain death</li>
+<li><em>Defiant Stance</em> can be taken over <em>Blood Reckoning</em>. It will allow you to heal to full when dropping the poison and heal while resing people who go down in a bad spot</li>
+<li>You will need GS3 + one dodge to avoid all of Slothasor's shake attack</li>
+</ul>
+<h3>Bandit Trio</h3>
+<ul>
+<li>Trying to Melee Narella can be difficult. If you want to Melee Narella, take <em>Balanced Stance</em> over <em>Signet of Fury</em></li>
+<li>Longbow can be used to safely DPS Narella at range as well as apply easy burning stacks</li>
+<li>In between bandits, charge your adrenaline on ads so you can enter <em>Beserk</em> as soon as one of the Trio appears</li>
+</ul>
+<h3>Matthias Gabrel</h3>
+<ul>
+<li><em>Defiant Stance</em> will almost always be required here over <em>Blood Reckoning</em></li>
+<li>Auto Targeting can never be used. Being able to GS5 towards a well to clear poison is too good</li>
+<li>You will almost always need to take <em>Wild Blow</em> over <em>Signet of Fury</em> due to breaks</li>
+<li>Even when Matthius has his shield up, you can still attack him to generate Might for the raid (zero damage crits are still crits)</li>
+<li>GS3 and GS5 don't count as moving during the Rain phase</li>
+<li>Entering <em>Beserk</em> applies Taunt to enemies, and can be used for additional break bar damage</li>
+</ul>
+<h3>Siege the Stronghold</h3>
+<ul>
+<li><em>Balanced Stance</em> will be required unless you're group as another source of Stability (Both Paths)</li>
+<li>Entering <em>Beserk</em> can be used to interupt and pull enemies, as well as break Clerics (Both Paths)</li>
+<li>Consider taking <em>Signet of Fury</em>, <em>Signet of Might</em> and <em>Balanced Stance</em> if you are in the top group. Depending on group DPS this will give you more burst and may be enough to clear all mobs before the sustained DPS of the banners is required</li>
+</ul>
+<h3>Keep Construct</h3>
+<h3>Xera</h3>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
